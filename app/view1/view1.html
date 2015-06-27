@@ -1,1 +1,46 @@
-<p>This is the partial for view 1.</p>
+<div class="container">
+<div class="widget-box" id="recent-box">
+<div class="widget-header header-color-blue">
+<div class="row">
+<div class="col-sm-6">
+<h4 class="bigger lighter"><i class="glyphicon glyphicon-align-justify"></i>
+Task Manager</h4>
+</div>
+
+<div class="col-sm-3"><button class="btn btn-sm btn-danger header-elements-margin"><i class="glyphicon glyphicon-plus"></i>Add New Task
+</button>
+</div>
+
+<div class="col-sm-3">
+<input class="form-control search header-elements-margin" type="text" placeholder="search tasks here" ng-model="filterTask" />
+</div>
+
+</div><!--eor-->
+</div><!--eo header widget-->
+
+<div class="widget-body">
+<form class="add-task" id="newTaskForm">
+<div class="form-actions">
+<div class="input-group"><input class="form-control" type="text" name="comment" placeholder="Add new task" ng-model="taskInput" />
+<div class="input-group-btn"><button class="btn btn-default" type="submit" ng-click="addTask(taskInput)"><i class="glyphicon glyphicon-plus"></i>Add new task</button>
+</div>
+</div>
+</div>
+</form>
+<div class="task">
+	<label class="checkbox">
+
+	</label>
+</div>
+
+<ul>
+<li class="todoList" ng-repeat="task in tasks | filter: filterTask" >
+<input type="checkbox" value="task.STATUS" ng-checked="task.STATUS==2" ng-click="toggleStatus(task.ID, task.STATUS, task.TASK)">
+<span ng-class="{strike:task.STATUS==2}">{{task.TASK}}</span>
+<button class="btn btn-danger pull-right" ng-click="deleteTask(task.ID)"><i class="glyphicon glyphicon-trash"></i></button>
+</li>
+</ul>
+</div><!--eo widget body-->
+
+</div><!--eo widget box-->
+</div>
