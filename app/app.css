@@ -29,4 +29,15 @@
   padding: 0;
 }
 
-.todoList {list-style: none;padding: 10px 0;}
+.todoList {list-style: none;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  background-color: #B9E8EC;}
+.strike {  text-decoration: line-through;}
+.ng-version {  text-align: center;
+  padding: 10px;
+  font-size: 11px;
+  border-top: 1px solid #F0EDED;
+  margin-top: 20px;}
+  .spinner {}

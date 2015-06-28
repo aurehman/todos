@@ -1,10 +1,5 @@
 <?php 
-$DB_HOST = '127.0.0.1';
-$DB_USER = 'root';
-$DB_PASS = '';
-$DB_NAME = 'angular_exercise';
-$mysqli = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME);
- // The mysql database connection script
+require_once '../lib/db.php'; // The mysql database connection script
 $status = '%';
 if(isset($_GET['status'])){
 $status = $_GET['status'];
