@@ -1,15 +1,15 @@
 'use strict';
 
-angular.module('myApp.view1', ['ngRoute'])
+angular.module('myApp.todos', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {
-    templateUrl: 'view1/view1.html',
-    controller: 'View1Ctrl'
+  $routeProvider.when('/todos', {
+    templateUrl: 'todos/todos.html',
+    controller: 'todosCtrl'
   });
 }])
 
-.controller('View1Ctrl', function($scope, $http) {
+.controller('todosCtrl', function($scope, $http) {
  getTask();
 
 function getTask() {

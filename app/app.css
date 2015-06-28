@@ -41,3 +41,5 @@
   border-top: 1px solid #F0EDED;
   margin-top: 20px;}
   .spinner {}
+  .todo-header {padding:30px 0 10px;}
+  ul.todos {padding:0;}

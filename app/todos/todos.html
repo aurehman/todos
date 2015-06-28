@@ -1,5 +1,4 @@
-<div class="widget-box" id="recent-box">
-<div class="widget-header header-color-blue">
+<div class="todo-header">
 <div class="row">
 <div class="col-sm-6">
 <h4 class="bigger lighter">
@@ -14,7 +13,7 @@ My Todos App</h4>
 </div><!--eor-->
 </div><!--eo header widget-->
 
-<div class="widget-body">
+<div class="todo-body">
 <form class="add-todo" id="newTaskForm">
 <div class="form-actions">
 <div class="input-group"><input class="form-control" type="text" name="comment" placeholder="Add new todo" ng-model="todoInput" required />
@@ -30,7 +29,7 @@ My Todos App</h4>
 	</label>
 </div>
 
-<ul>
+<ul class="todos">
 <li class="todoList" ng-repeat="todo in todos | filter: filterTask" >
 <input type="checkbox" value="todo.STATUS" ng-checked="todo.STATUS==2" ng-click="updateStatus(todo.ID, todo.STATUS, todo.TASK)">
 <span ng-class="{strike:todo.STATUS==2}">{{todo.TASK}}</span>
@@ -38,6 +37,4 @@ My Todos App</h4>
 </li>
 </ul>
 </div><!--eo widget body-->
-
-</div><!--eo widget box-->
 
