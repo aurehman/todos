@@ -29,12 +29,14 @@ My Todos App</h4>
 	</label>
 </div>
 
-<ul class="todos">
-<li class="todoList" ng-repeat="todo in todos | filter: filterTask" >
+<div class="row todos" ng-repeat="todo in todos | filter: filterTask">
+<div class="col-sm-9 todoList" >
 <input type="checkbox" value="todo.STATUS" ng-checked="todo.STATUS==2" ng-click="updateStatus(todo.ID, todo.STATUS, todo.TASK)">
 <span ng-class="{strike:todo.STATUS==2}">{{todo.TASK}}</span>
+</div>
+<div class="col-sm-3">
 <button class="btn btn-danger pull-right" ng-click="deleteTask(todo.ID)"><i class="glyphicon glyphicon-trash"></i></button>
-</li>
-</ul>
+</div>
+</div>
 </div><!--eo widget body-->
 
